@@ -1,13 +1,20 @@
-<?php
-require 'functions.php'; 
+ <?Php
 
+require 'functions.php';
+$dbPassword = "";
+$dbUser = "root";
+$dbServer = "localhost";
+$dbName = "mytodo";
 
-$task = [
-    'title' => 'Make bed',
-    'due'   => 'Every Morning',
-    'assigned_to' =>'Ishfaq',
+try {
+    $pdo = new PDO('mysql:host='.$dbServer.';dbname='.$dbName,$dbUser,$dbPassword);
     
- ];
-$task['completed'] = true;
-require 'index.view.php';
+} catch (PDOException $e) {
+    echo $e->getMessage();
+}
+$statement = $pdo->prepare('select * from todos');
+$statement->execute();
+$tasks = $statement->fetchAll(PDO::FETCH_OBJ);
+dd($tasks);
 ?>
+
