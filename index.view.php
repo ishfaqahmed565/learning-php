@@ -13,31 +13,20 @@
 <body>
     <h1>Task for the day</h1>
         <ul>
-                <li>
-                   <strong>Name : </strong> <?=  $task['title'] ;?>
-                </li>
-                
-                <li>
-                   <strong>Due Time : </strong> <?=  $task['due'] ;?>
-                </li>
-                
-                <li>
-                   <strong>Person Responsible : </strong> <?=  $task['assigned_to'] ;?>
-                </li>
-                
-                <li>
-                   <strong>Status: </strong> 
-                    <?php if($task['completed']): ?>
-                       <span> 
-                       &#9989
-                       </span>
-                    <?php else: ?>
-                       <span class="status">
-                       &#10062
-                       </span>
-                    <?php endif; ?>
-                    
-                </li>
+            <?php foreach($tasks as $task): ?>
+            <?php if($task->completed == true): ?>
+               <strike>
+                  <li>
+                     <?=$task->description?>
+                  </li>
+               </strike>
+               <?php else: ?>
+                  <li>
+                     <?=$task->description?>
+                  </li>
+               <?php endif; ?> 
+               
+               <?php endforeach; ?> 
         </ul>
 </body>
 </html>
