@@ -1,4 +1,5 @@
 <?php
 
-$tasks = $app['database']->selectAll('todos');
+$names = $app['database']->selectAll('names');
+var_dump($tasks);
 require 'views/index.view.php';

@@ -2,22 +2,20 @@
 </ul>
 <h1>Task for the day</h1>
 <ul>
-   <?php foreach($tasks as $task): ?>
-      <?php if($task->completed == true): ?>
-         <strike>
-            <li>
-               <?=$task->description?>
-            </li>
-         </strike>
-         <?php else: ?>
-            <li>
-               <?=$task->description?>
-            </li>
-            <?php endif; ?> 
-            
+   <?php foreach($names as $name): ?>
+      <li>
+         <?php echo $name->name; ?>
+      </li>
+         
+             
             <?php endforeach; ?> 
          </ul>
+         <form action="names" method="POST">
+            <input name="name">
+            <button type="submit">Submit</button>
+</form>
          <?php require('partials/footer.php'); ?>
+
          
  
                                                               
