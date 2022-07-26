@@ -1,6 +1,6 @@
 <?php require('partials/head.php'); ?>
 </ul>
-<h1>Task for the day</h1>
+<h1>Names</h1>
 <ul>
    <?php foreach($names as $name): ?>
       <li>

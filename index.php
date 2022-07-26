@@ -1,7 +1,6 @@
  <?Php
-
-$query = require 'core/bootstrap.php';
-
+require 'vendor/autoload.php';
+require 'core/bootstrap.php';
 
 $router = new Router;
 require 'routes.php';
