@@ -6,7 +6,11 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'App' => $baseDir . '/core/App.php',
+    'App\\Controllers\\PagesController' => $baseDir . '/app/controllers/PagesControllers.php',
+    'App\\Controllers\\UsersController' => $baseDir . '/app/controllers/UsersController.php',
+    'App\\Core\\App' => $baseDir . '/core/App.php',
+    'App\\Core\\Request' => $baseDir . '/core/request.php',
+    'App\\Core\\Router' => $baseDir . '/core/router.php',
     'ComposerAutoloaderInitba4c28c9f9f46fe9b7ff08dc6309f002' => $vendorDir . '/composer/autoload_real.php',
     'Composer\\Autoload\\ClassLoader' => $vendorDir . '/composer/ClassLoader.php',
     'Composer\\Autoload\\ComposerStaticInitba4c28c9f9f46fe9b7ff08dc6309f002' => $vendorDir . '/composer/autoload_static.php',
@@ -16,9 +20,5 @@ return array(
     'HttpClient' => $baseDir . '/composer-setup.php',
     'Installer' => $baseDir . '/composer-setup.php',
     'NoProxyPattern' => $baseDir . '/composer-setup.php',
-    'PagesController' => $baseDir . '/controllers/PagesControllers.php',
     'QueryBuilder' => $baseDir . '/core/database/QueryBuilder.php',
-    'Request' => $baseDir . '/core/request.php',
-    'Router' => $baseDir . '/core/router.php',
-    'UsersController' => $baseDir . '/controllers/UsersController.php',
 );

@@ -1,5 +1,6 @@
 <?php
-
+namespace App\Core;
+use App\Controllers\PagesController;
 class Router{
     protected $routes = [
         'GET' => [],
@@ -27,6 +28,8 @@ class Router{
         throw new Exception('No route defined for this URI.');
     }
     private function callAction($controller,$action){
+        $controller = "App\Controllers\\{$controller}";
+        
         $controller = new $controller;
         if(!method_exists($controller,$action)){
             throw new Exception("{$controller} does not respond to the {$action} action");
