@@ -16,7 +16,9 @@ return array(
     'HttpClient' => $baseDir . '/composer-setup.php',
     'Installer' => $baseDir . '/composer-setup.php',
     'NoProxyPattern' => $baseDir . '/composer-setup.php',
+    'PagesController' => $baseDir . '/controllers/PagesControllers.php',
     'QueryBuilder' => $baseDir . '/core/database/QueryBuilder.php',
     'Request' => $baseDir . '/core/request.php',
     'Router' => $baseDir . '/core/router.php',
+    'UsersController' => $baseDir . '/controllers/UsersController.php',
 );

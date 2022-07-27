@@ -17,9 +17,11 @@ class ComposerStaticInitba4c28c9f9f46fe9b7ff08dc6309f002
         'HttpClient' => __DIR__ . '/../..' . '/composer-setup.php',
         'Installer' => __DIR__ . '/../..' . '/composer-setup.php',
         'NoProxyPattern' => __DIR__ . '/../..' . '/composer-setup.php',
+        'PagesController' => __DIR__ . '/../..' . '/controllers/PagesControllers.php',
         'QueryBuilder' => __DIR__ . '/../..' . '/core/database/QueryBuilder.php',
         'Request' => __DIR__ . '/../..' . '/core/request.php',
         'Router' => __DIR__ . '/../..' . '/core/router.php',
+        'UsersController' => __DIR__ . '/../..' . '/controllers/UsersController.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
